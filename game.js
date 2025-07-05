@@ -828,35 +828,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function createCloud() {
-    if (isGameOver || isPaused || !gameScreen) return;
+  //   function createCloud() {
+  //     if (isGameOver || isPaused || !gameScreen) return;
 
-    const size = Math.floor(Math.random() * 200) + 100; // Larger clouds
-    const y = Math.floor(Math.random() * window.innerHeight);
-    const opacity = Math.random() * 0.4 + 0.3;
-    const cloud = createGameElement("cloud", {
-      width: `${size}px`,
-      height: `${size}px`,
-      left: `${window.innerWidth}px`,
-      top: `${y}px`,
-      backgroundColor: `rgba(255, 255, 255, ${opacity})`,
-      borderRadius: "50%",
-      filter: "blur(10px)",
-      backgroundImage: 'url("skyfury-cloud.jpg")', // Place skyfury-cloud.png in root
-      backgroundSize: "contain",
-    });
+  //     const size = Math.floor(Math.random() * 200) + 100; // Larger clouds
+  //     const y = Math.floor(Math.random() * window.innerHeight);
+  //     const opacity = Math.random() * 0.4 + 0.3;
+  //     const cloud = createGameElement("cloud", {
+  //       width: `${size}px`,
+  //       height: `${size}px`,
+  //       left: `${window.innerWidth}px`,
+  //       top: `${y}px`,
+  //       backgroundColor: `rgba(255, 255, 255, ${opacity})`,
+  //       borderRadius: "50%",
+  //       filter: "blur(10px)",
+  //       backgroundImage: 'url("skyfury-clouds.jpg")', // Place skyfury-cloud.png in root
+  //       backgroundSize: "contain",
+  //     });
 
-    gameScreen.appendChild(cloud);
+  //     gameScreen.appendChild(cloud);
 
-    clouds.push({
-      element: cloud,
-      x: window.innerWidth,
-      y: y,
-      width: size,
-      height: size,
-      speed: Math.random() * 2 + 1,
-    });
-  }
+  //     clouds.push({
+  //       element: cloud,
+  //       x: window.innerWidth,
+  //       y: y,
+  //       width: size,
+  //       height: size,
+  //       speed: Math.random() * 2 + 1,
+  //     });
+  //   }
 
   function gameLoop() {
     if (isGameOver || isPaused || !plane) {
